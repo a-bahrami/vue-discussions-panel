@@ -75,7 +75,7 @@
         {
           if (  this.discussionable_id != null , this.discussionable_type != null){
 
-            // get data form database with axios | fetch method 
+            // get data form database with axios | fetch method with phoymorphic relationship 
 
             axios.get('/v1/discussions', {
                 params: {
@@ -90,6 +90,7 @@
 
 
               // if not found any discussion show msg for user ; 
+
               if(this.discussionItems == [])
                 this.status = "your can set first discussion now .. :)" 
           }
